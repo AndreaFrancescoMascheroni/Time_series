@@ -12,7 +12,7 @@ View(Dataset3)
 Dataset4 <- read_dta("/Users/mascheroni/Documents/Angrist1990/dmdcdat.dta")
 View(Dataset4)
 
-Dataset5 <- read_dta("/Users/mascheroni/Documents/Angrist1990/cwhsc_new.dta")
+Dataset5 <- read_dta("./Angrist1990/cwhsc_new.dta")
 View(Dataset5)
 
 Dataset6 <- read_dta("/Users/mascheroni/Documents/Angrist1990/sipp2.dta")
