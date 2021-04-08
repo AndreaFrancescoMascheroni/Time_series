@@ -30,4 +30,14 @@ chooseStataBin()
 #stata("Angrist1990_Fig3.do", 
 #      stata.path = "/var/folders/f5/r5r171jd2g77lyj9vkrrql600000gq/T//RtmpuXBTQy/downloaded_packages/RStata", # yours probably differs: use the chooseStataBin() command on windows or linux machines; on Macs, right click on the Stata app, select "Show Package Contents", then see what's in the Contents/MacOS/ directory
 #      stata.version = 13)  # again, specify what _you_ have
+
+stata_src <- '
+version 10
+set more off
+sysuse auto
+reg mpg weight
+'
+stata(stata_src)
 stata("/Users/mascheroni/Documents/master/secondo/Time_series/dataverse_files/Angrist1990_Fig3.do")
+stata(stata_src)
+stata("Angrist1990_Fig3.do")
