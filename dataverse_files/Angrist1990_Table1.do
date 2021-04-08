@@ -53,10 +53,10 @@ g byte fica= type=="TAXAB"
 egen collby= group(white byr year eligible fica)
 
 * SOME CALCULATIONS FOR STANDARD ERRORS
-	g var= vsd1^2
+	g var= vsd1^2 * errore del guadagno di tutti
 	* VARIANCE OF NONZERO CELLS 
 	g var_nz= (vnu1*(var+vmn1^2)-wt_nz*earn_nz^2)/wt_nz
-	*  g var_nz= var*(vnu1/wt_nz)	!!!! USE THIS  VERSION TO REPRODUCE SEs IN PUBLISHED TABLE 1 OF ANGRIST (1990) !!!!!
+	*  g var_nz= var*(vnu1/wt_nz)	!!!! USE THIS  VERSION TO REPRODUCE SEs IN PUBLISHED TABLE 1 OF ANGRIST (1990) !!!!! * errore dei guadagni dei soli non zeri ossia di solo chi va in guerra
 	
 	* SUM WEIGHTS ACROSS GROUP CELLS
 	egen sumwt=sum(wt_nz), by(collby)
